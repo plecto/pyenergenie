@@ -8,6 +8,7 @@
 # will be much nicer to use.
 
 import time
+
 from energenie import Messages, OpenThings, radio, encoder, Devices
 
 # build FSK messages for MiHome purple

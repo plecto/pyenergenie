@@ -3,8 +3,10 @@
 # A simple logger - logs to file.
 
 
+import os
+import time
+
 from energenie import OpenThings
-import os, time
 
 LOG_FILENAME = "energenie.csv"
 HEADINGS = 'timestamp,mfrid,prodid,sensorid,flags,switch,voltage,freq,reactive,real,apparent,current,temperature'

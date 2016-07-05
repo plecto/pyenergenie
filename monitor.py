@@ -9,9 +9,11 @@
 # However, it will log all messages from MiHome monitor, adaptor plus and house monitor
 # to a CSV log file, so could be the basis for a non-controlling energy logging app.
 
-from energenie import Registry, Devices, Messages, OpenThings, radio
 import time
+
 import Logger
+from energenie import Registry, Devices, Messages, OpenThings, radio
+
 
 def warning(msg):
     print("warning:%s" % str(msg))

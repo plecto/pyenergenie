@@ -39,14 +39,14 @@ except NameError:
 HOUSE_ADDRESS = None # Use default energenie quasi-random address 0x6C6C6
 ##HOUSE_ADDRESS = 0xA0170 # Captured address of David's RF hand controller
 
-ALL_ON     = encoder.build_switch_msg(True,                    house_address=HOUSE_ADDRESS)
-ONE_ON     = encoder.build_switch_msg(True,  device_address=1, house_address=HOUSE_ADDRESS)
-TWO_ON     = encoder.build_switch_msg(True,  device_address=2, house_address=HOUSE_ADDRESS)
-THREE_ON   = encoder.build_switch_msg(True,  device_address=3, house_address=HOUSE_ADDRESS)
-FOUR_ON    = encoder.build_switch_msg(True,  device_address=4, house_address=HOUSE_ADDRESS)
+ALL_ON     = encoder.build_switch_msg(True, house_address=HOUSE_ADDRESS)
+ONE_ON     = encoder.build_switch_msg(True, device_address=1, house_address=HOUSE_ADDRESS)
+TWO_ON     = encoder.build_switch_msg(True, device_address=2, house_address=HOUSE_ADDRESS)
+THREE_ON   = encoder.build_switch_msg(True, device_address=3, house_address=HOUSE_ADDRESS)
+FOUR_ON    = encoder.build_switch_msg(True, device_address=4, house_address=HOUSE_ADDRESS)
 ON_MSGS    = [ALL_ON, ONE_ON, TWO_ON, THREE_ON, FOUR_ON]
 
-ALL_OFF    = encoder.build_switch_msg(False,                   house_address=HOUSE_ADDRESS)
+ALL_OFF    = encoder.build_switch_msg(False, house_address=HOUSE_ADDRESS)
 ONE_OFF    = encoder.build_switch_msg(False, device_address=1, house_address=HOUSE_ADDRESS)
 TWO_OFF    = encoder.build_switch_msg(False, device_address=2, house_address=HOUSE_ADDRESS)
 THREE_OFF  = encoder.build_switch_msg(False, device_address=3, house_address=HOUSE_ADDRESS)

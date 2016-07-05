@@ -11,9 +11,9 @@
 # Consider waiting for me to finish developing the device object interface first.
 
 import time
-from energenie import Devices, Messages, Registry, OpenThings, radio
-from Timer import Timer
 
+from Timer import Timer
+from energenie import Devices, Messages, Registry, OpenThings, radio
 
 # Increase this if you have lots of switches, so that the receiver has enough
 # time to receive update messages, otherwise your devices won't make it into
@@ -80,8 +80,8 @@ def switch_toggle_loop():
 
             if Devices.hasSwitch(mfrid, productid):
                 request = OpenThings.alterMessage(Messages.SWITCH,
-                    header_sensorid=sensorid,
-                    recs_0_value=switch_state)
+                                                  header_sensorid=sensorid,
+                                                  recs_0_value=switch_state)
                 p = OpenThings.encode(request)
                 print("Sending switch message to %s %s" % (hex(productid), hex(sensorid)))
                 # Transmit multiple times, hope one of them gets through
@@ -100,8 +100,8 @@ if __name__ == "__main__":
     # Seed the registry with a known device, to simplify tx-only testing
     SENSOR_ID = 0x68B # captured from a real device
     device_header = OpenThings.alterMessage(Messages.REGISTERED_SENSOR,
-        header_mfrid     = Devices.MFRID,
-        header_productid = Devices.PRODUCTID_MIHO005, # adaptor plus
+                                            header_mfrid     = Devices.MFRID,
+                                            header_productid = Devices.PRODUCTID_MIHO005,  # adaptor plus
         header_sensorid  = SENSOR_ID)
     Registry.update(device_header)
 

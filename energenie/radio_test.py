@@ -5,8 +5,9 @@
 # Repeatedly transmits OOK packets to turn switch 1 on and off.
 #
 
-import radio
 import time
+
+import radio
 
 # How many times to repeat the OOK payload.
 # 4800bps*8*16=26ms per payload
